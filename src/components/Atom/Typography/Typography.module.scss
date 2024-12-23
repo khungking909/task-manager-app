@@ -1,0 +1,206 @@
+.heading {
+  &--h1 {
+    font-size: 80px;
+    line-height: 84px;
+    letter-spacing: -3px;
+    font-family: var(--font-space-grotesk);
+    font-weight: 500;
+  }
+
+  &--h2 {
+    font-size: 72px;
+    line-height: 76px;
+    letter-spacing: -2px;
+    font-family: var(--font-space-grotesk);
+    font-weight: 500;
+  }
+
+  &--h3 {
+    font-size: 54px;
+    line-height: 58px;
+    letter-spacing: -1px;
+    font-family: var(--font-space-grotesk);
+    font-weight: 500;
+  }
+
+  &--h4 {
+    font-size: 40px;
+    line-height: 44px;
+    letter-spacing: -0.4px;
+    font-family: var(--font-space-grotesk);
+    font-weight: 500;
+  }
+
+  &--h5 {
+    font-size: 34px;
+    line-height: 38px;
+    letter-spacing: -0.6px;
+    font-family: var(--font-space-grotesk);
+    font-weight: 500;
+  }
+
+  &--h6 {
+    font-size: 28px;
+    line-height: 34px;
+    letter-spacing: -0.6px;
+    font-family: var(--font-space-grotesk);
+    font-weight: 500;
+  }
+
+  &--h7 {
+    font-size: 20px;
+    line-height: 28px;
+    font-family: var(--font-space-grotesk);
+    font-weight: 500;
+  }
+}
+
+.text-align {
+  &--center {
+    text-align: center;
+  }
+
+  &--right {
+    text-align: right;
+  }
+
+  &--left {
+    text-align: left;
+  }
+}
+
+.white-space {
+  &--pre-line {
+    white-space: pre-line;
+  }
+
+  &--nowrap {
+    white-space: nowrap;
+  }
+
+  &--normal {
+    white-space: normal;
+  }
+
+  &--break-spaces {
+    white-space: break-spaces;
+  }
+
+  &--pre-wrap {
+    white-space: pre-wrap;
+  }
+
+  &--pre {
+    white-space: pre;
+  }
+}
+
+.text-decoration {
+  &--overline {
+    text-decoration: overline;
+  }
+
+  &--line-through {
+    text-decoration: underline;
+    text-underline-offset: -40%;
+    text-decoration-skip-ink: none;
+  }
+
+  &--underline {
+    text-decoration: underline;
+    text-underline-offset: 4px;
+  }
+}
+
+.font-style {
+  &--normal {
+    font-style: normal;
+  }
+
+  &--italic {
+    font-style: italic;
+  }
+
+  &--oblique {
+    font-style: oblique;
+  }
+}
+
+.font-family {
+  &--inter {
+    font-family: var(--font-inter);
+  }
+
+  &--space-grote {
+    font-family: var(--font-space-grotesk);
+  }
+}
+
+.font-weight {
+  &--bold {
+    font-weight: var(--font-weight-bold);
+  }
+
+  &--premium {
+    font-weight: var(--font-weight-medium);
+  }
+
+  &--regular {
+    font-weight: var(--font-weight-regular);
+  }
+
+  &--semibold {
+    font-weight: 600;
+  }
+}
+
+.font-size {
+  &--xs {
+    font-size: 12px;
+    line-height: 20px;
+  }
+
+  &--sm {
+    font-size: 14px;
+    line-height: 22px;
+  }
+
+  &--base {
+    font-size: 16px;
+    line-height: 26px;
+  }
+
+  &--lg {
+    font-size: 18px;
+    line-height: 30px;
+  }
+
+  &--xl {
+    font-size: 20px;
+    line-height: 32px;
+  }
+
+  &--2xl {
+    font-size: 22px;
+    line-height: 34px;
+  }
+
+  &--3xl {
+    font-size: 26px;
+    line-height: 40px;
+  }
+}
+
+.text-transform {
+  &--capitalize {
+    text-transform: capitalize;
+  }
+
+  &--lowercase {
+    text-transform: lowercase;
+  }
+
+  &--uppercase {
+    text-transform: uppercase;
+  }
+}
