@@ -1,0 +1,39 @@
+@mixin sm {
+  @media (width <= 640px) {
+    @content;
+  }
+}
+
+@mixin md {
+  @media (width <= 768px) {
+    @content;
+  }
+}
+
+@mixin lg {
+  @media (width >= 1024px) {
+    @content;
+  }
+}
+
+@mixin xl {
+  @media (width >= 1280px) {
+    @content;
+  }
+}
+
+@mixin light($selector) {
+  :global(html) {
+    #{$selector} {
+      @content;
+    }
+  }
+}
+
+@mixin dark($selector) {
+  :global(html.lights-out) {
+    #{$selector} {
+      @content;
+    }
+  }
+}

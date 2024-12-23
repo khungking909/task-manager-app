@@ -1,0 +1,35 @@
+networks:
+  haibazo-react-first-dev-network:
+    driver: bridge
+
+services:
+  container:
+    # Name of the container
+    container_name: haibazo-react-first-dev-container
+
+    # Build configuration
+    # build:
+    # # Context path for the build (current directory)
+    # # context: .
+    # # Dockerfile to use for building the image
+    # # dockerfile: Dockerfile
+
+    # Image to use
+    image: bitnami/node:22.10.0
+
+    # Volumes to mount
+    volumes:
+      # Mount the directory two levels up to /workspaces inside the container with caching
+      - ../../:/workspaces:cached
+
+    # Command to run inside the container (keeps the container running indefinitely)
+    command: sleep infinity
+
+    # Specify the networks to use
+    networks:
+      - haibazo-react-first-dev-network
+
+    # Ports to expose
+    ports:
+      - '2006:6006'
+      - '2073:5173'
