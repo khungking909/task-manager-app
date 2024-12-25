@@ -12,9 +12,9 @@ const getValueFromBreakpoint = (
     return value[breakpoint];
   }
 
-  const breakpoints: (keyof ResponsiveType)[] = ['sm', 'md', 'lg', 'xl'];
+  const breakpoints: (keyof ResponsiveType)[] = ['xs', 'sm', 'md', 'lg', 'xl'];
 
-  if (breakpoint === 'sm') {
+  if (breakpoint === 'xs') {
     const largerBreakpoints = breakpoints.slice(breakpoints.indexOf(breakpoint) + 1);
     for (let i = 0; i < largerBreakpoints.length; i++) {
       const nextBreakpoint = largerBreakpoints[i];

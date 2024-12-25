@@ -5,13 +5,20 @@ const getSize = (width: number): keyof ResponsiveType => {
   if (width >= 1280) {
     return 'xl'; // Extra Large
   }
+
   if (width >= 1024) {
     return 'lg'; // Large
   }
+
   if (width >= 768) {
     return 'md'; // Medium
   }
-  return 'sm'; // Small
+
+  if (width >= 640) {
+    return 'sm'; // Small
+  }
+
+  return 'xs'; // Extra Small
 };
 
 export default function useScreenSize() {
