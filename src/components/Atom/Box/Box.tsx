@@ -1,9 +1,9 @@
 import { css } from '@emotion/css';
 import useScreenSize from '@hooks/useScreenSize';
 import { useMemo } from 'react';
+import { addPx } from 'src/utils/addPx';
 import { getValueFromBreakpoint } from 'src/utils/getValueFromBreakpoint';
 import { BoxProps } from './type';
-import { addPx } from 'src/utils/addPx';
 
 const Box = ({
   position,
@@ -42,6 +42,7 @@ const Box = ({
   alignItems,
   gap,
   children,
+  ...props
 }: BoxProps) => {
   const responsive = useScreenSize();
   const { style: borderStyle, color: borderColor, width: borderWidth } = border || {};
@@ -97,6 +98,7 @@ const Box = ({
         align-items: ${alignItems};
         gap: ${addPx(getValueFromBreakpoint(responsive, gap))};
       `}
+      {...props}
     >
       {children}
     </div>
