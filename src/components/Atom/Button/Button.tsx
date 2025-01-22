@@ -31,7 +31,12 @@ const Button = ({
   }, [color, disabled, outline, roundness, shape, size]);
   return (
     <button type={type} className={buttonClass}>
-      <div className={arrayToString([buttonClassModule.content, buttonClassModule[`font-size--${size}`]])}>
+      <div
+        className={arrayToString([
+          buttonClassModule.content,
+          typeof children === 'string' ? buttonClassModule[`font-size--${size}`] : '',
+        ])}
+      >
         {IconLeft}
         {children}
         {IconRight}
