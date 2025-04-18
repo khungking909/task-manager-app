@@ -1,11 +1,11 @@
 networks:
-  haibazo-react-first-dev-network:
+  yen-react-first-dev-network:
     driver: bridge
 
 services:
   container:
     # Name of the container
-    container_name: haibazo-react-first-dev-container
+    container_name: yen-react-first-dev-container
 
     # Build configuration
     # build:
@@ -27,7 +27,7 @@ services:
 
     # Specify the networks to use
     networks:
-      - haibazo-react-first-dev-network
+      - yen-react-first-dev-network
 
     # Ports to expose
     ports:

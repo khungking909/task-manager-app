@@ -7,5 +7,7 @@ export default {
         ignorePseudoClasses: ['global'],
       },
     ],
+    'selector-class-pattern': null,
+    'no-descending-specificity': null,
   },
 };

@@ -1,0 +1,57 @@
+@import '../../../../styles/mixins.scss';
+
+.root {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  inset: 0;
+  z-index: 10;
+  overflow: auto;
+  opacity: 1;
+  transition: opacity 0.3s ease;
+
+  &.closing {
+    opacity: 0;
+  }
+
+  .children {
+    position: absolute;
+    transition: transform 0.3s ease;
+
+    &.left {
+      top: 0;
+      left: 0;
+      animation: left-to-right 0.3s forwards;
+    }
+
+    &.right {
+      top: 0;
+      right: 0;
+      animation: right-to-left 0.3s forwards;
+    }
+
+    &.bottom {
+      bottom: 0;
+      transform: translateY(100%);
+      animation: scale-up 0.3s forwards;
+    }
+
+    &.top {
+      top: 0;
+      transform: translateY(-100%);
+      animation: scale-down 0.3s forwards;
+    }
+
+    &.center {
+      width: max-content;
+      max-height: calc(100vh - 32px);
+      max-width: calc(100vw - 32px);
+      overflow: auto;
+      top: 50%;
+      left: 50%;
+      transform-origin: center;
+      animation: zoom-in 0.3s forwards;
+    }
+  }
+}

@@ -14,7 +14,7 @@ const getSize = (width: number): keyof ResponsiveType => {
     return 'md'; // Medium
   }
 
-  if (width >= 640) {
+  if (width >= 480) {
     return 'sm'; // Small
   }
 

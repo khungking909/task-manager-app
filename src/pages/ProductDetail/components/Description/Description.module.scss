@@ -1,0 +1,11 @@
+.description {
+  user-select: text !important;
+
+  & > div {
+    border: none !important;
+
+    & > div {
+      padding: 0;
+    }
+  }
+}

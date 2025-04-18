@@ -1,0 +1,29 @@
+.swatches {
+  min-width: var(--width);
+  height: var(--width);
+  background-color: var(--color-black-100);
+  opacity: 0.7;
+  padding: 0 var(--spacing-16);
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.15s ease-in-out;
+
+  &.active {
+    background-color: var(--color-black-900);
+    color: var(--color-white);
+  }
+
+  &.size {
+    &__small {
+      --width: 32px;
+    }
+
+    &__medium {
+      --width: 38px;
+    }
+
+    &__large {
+      --width: 46px;
+    }
+  }
+}

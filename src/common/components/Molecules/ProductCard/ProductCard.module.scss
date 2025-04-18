@@ -1,0 +1,42 @@
+@import '../../../../styles/mixins.scss';
+
+.product__card__image {
+  position: relative;
+  overflow: hidden;
+
+  &:hover .hover__box {
+    visibility: visible;
+    transform: translateX(0);
+    transition: transform 0.2s ease-in-out;
+  }
+
+  .hover__box {
+    visibility: hidden;
+    position: absolute;
+    top: var(--spacing-16);
+    right: var(--spacing-16);
+    transform: translateX(100%);
+  }
+}
+
+@include sm {
+  .product__card__image {
+    .hover__box {
+      visibility: visible;
+      top: var(--spacing-10);
+      right: var(--spacing-10);
+      transform: translateX(0);
+    }
+  }
+}
+
+@include xs {
+  .product__card__image {
+    .hover__box {
+      visibility: visible;
+      top: var(--spacing-8);
+      right: var(--spacing-8);
+      transform: translateX(0);
+    }
+  }
+}

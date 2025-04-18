@@ -1,0 +1,11 @@
+.tab__item {
+  border-bottom: var(--spacing-1) solid var(--color-black-300);
+  transition:
+    border-color 0.2s ease-in-out,
+    color 0.2s ease-in-out;
+
+  &.active {
+    border-color: var(--color-black-900);
+    border-width: var(--spacing-2);
+  }
+}

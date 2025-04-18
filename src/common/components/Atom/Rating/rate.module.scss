@@ -1,0 +1,42 @@
+.rate {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: max-content;
+  gap: 8px;
+
+  .star-group {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2px;
+  }
+}
+
+.rate-star {
+  cursor: pointer;
+  display: flex;
+
+  &--small {
+    width: 16px;
+    height: 16px;
+  }
+
+  &--medium {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+.empty-start {
+  position: relative;
+  display: flex;
+
+  .half-star {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    overflow: hidden;
+  }
+}

@@ -1,0 +1,26 @@
+.grid-container {
+  &.grid-flow {
+    &--row {
+      grid-auto-flow: row;
+    }
+
+    &--column {
+      grid-auto-flow: column;
+    }
+  }
+
+  @for $i from 1 through 12 {
+    &.cols-#{ $i } {
+      grid-template-columns: repeat(#{$i}, minmax(0, 1fr));
+    }
+  }
+
+  &.full {
+    width: 100%;
+  }
+}
+
+.disabled {
+  pointer-events: none;
+  opacity: 0.3;
+}

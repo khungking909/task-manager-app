@@ -1,0 +1,97 @@
+{
+  "home": "Trang chủ",
+  "product": "Sản phẩm",
+  "news": "Tin tức",
+  "contact": "Liên hệ",
+  "outstanding": "Nổi bật",
+  "search_placeholder": "Tìm kiếm...",
+  "newletter": {
+    "title": "ĐĂNG KÝ NGAY",
+    "placeholder": "Nhập địa chỉ email của bạn",
+    "button": "Đăng ký"
+  },
+  "feature_products": {
+    "about": "Về chúng tôi",
+    "description": "Chúng tôi tin rằng sức khỏe là nền tảng của hạnh phúc. Vì vậy, chúng tôi cam kết mang đến sản phẩm chất lượng cao, an toàn, giàu dinh dưỡng, kết hợp nguyên liệu thiên nhiên chọn lọc và công nghệ tiên tiến. Với tiêu chí “Lượng + Chất”, chúng tôi minh bạch về nguồn gốc, công khai kiểm định dinh dưỡng và tuân thủ các tiêu chuẩn quốc tế. Mỗi hũ yến không chỉ là thực phẩm, mà còn là sự trân quý dành cho sức khỏe của bạn và gia đình."
+  },
+  "successfully": "Thành công",
+  "footer": {
+    "description": "Chúng tôi có những thứ bạn cần cho sức khoẻ của mình.",
+    "menu": {
+      "home": "Trang chủ",
+      "help": "Trợ giúp",
+      "company": "Công ty",
+      "contact": "Liên hệ"
+    }
+  },
+  "products": {
+    "casual": "Thường ngày",
+    "sort_by": "Sắp xếp theo",
+    "sort_by_options": {
+      "newest": "Mới nhất",
+      "oldest": "Cũ nhất",
+      "price_asc": "Giá: Thấp đến Cao",
+      "price_desc": "Giá: Cao đến Thấp"
+    },
+    "add_to_cart": "Thêm vào giỏ hàng",
+    "like": "Thích",
+    "color": "Màu sắc",
+    "size": "Kích thước",
+    "description": "Mô tả",
+    "review": "Đánh giá",
+    "reviews": {
+      "title": "Đánh giá",
+      "write_review": "Viết đánh giá",
+      "review": "Đánh giá",
+      "all_reviews": "Tất cả đánh giá"
+    },
+    "suggestions": "Bạn cũng có thể thích"
+  },
+  "carts": {
+    "cart": "Giỏ hàng",
+    "your_cart": "Giỏ hàng",
+    "total": "Tổng cộng",
+    "order_summary": "Tóm tắt đơn hàng",
+    "subtotal": "Tạm tính",
+    "discount": "Giảm giá",
+    "delivery_fee": "Phí vận chuyển",
+    "discount_apply": "Áp dụng",
+    "discount_code": "Nhập mã giảm giá",
+    "checkout": "Đến thanh toán",
+    "free_shipping": "Miễn phí",
+    "coupon_code": "Mã giảm giá",
+    "add_cart_success": "Đã thêm {{name}} vào giỏ hàng"
+  },
+  "users": {
+    "sign_out": "Đăng xuất",
+    "profile": "Hồ sơ",
+    "settings": "Cài đặt",
+    "Messages": "Tin nhắn",
+    "view_profile": "Xem hồ sơ",
+    "subscription": "Đăng ký",
+    "support": "Hỗ trợ",
+    "community": "Cộng đồng"
+  },
+  "validation": {
+    "required": "Trường này là bắt buộc",
+    "email": "Email không hợp lệ",
+    "password": "Mật khẩu phải chứa ít nhất 6 ký tự",
+    "password_confirm": "Mật khẩu không khớp",
+    "minLength": "{{field}} ít nhất {{length}} ký tự",
+    "maxLength": "{{field}} nhiều nhất {{length}} ký tự",
+    "valid": "{{field}} chỉ được chứa chữ, số và dấu gạch dưới",
+    "regex": {
+      "uppercase": "{{field}} phải chứa ít nhất một chữ cái viết hoa",
+      "lowercase": "{{field}} phải chứa ít nhất một chữ cái viết thường",
+      "number": "{{field}} phải chứa ít nhất một số",
+      "special_character": "{{field}} phải chứa ít nhất một ký tự đặc biệt"
+    }
+  },
+  "login": {
+    "title": "Đăng nhập",
+    "username": "Tên đăng nhập",
+    "email": "Email",
+    "password": "Mật khẩu",
+    "button": "Đăng nhập"
+  }
+}

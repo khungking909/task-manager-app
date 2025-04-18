@@ -6,9 +6,30 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  text-decoration: none;
+
+  ::-webkit-scrollbar {
+    width: 4px;
+    height: 1px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #f0f0f0;
+    border-radius: 10px;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #ccb7b7;
+    border-radius: 10px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: #c7b9b9;
+  }
 }
 
 body {
   margin: var(--spacing-0);
   font-family: var(--font-text);
+  user-select: none;
 }
