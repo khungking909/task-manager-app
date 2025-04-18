@@ -1,10 +1,10 @@
 <script>
   const attachCopyHandler = (version) => {
-    const haibazoBrandingContainer = window.parent.document.getElementById('haibazo-branding');
+    const brandingContainer = window.parent.document.getElementById('haibazo-branding');
 
-    if (!haibazoBrandingContainer) return;
+    if (!brandingContainer) return;
 
-    haibazoBrandingContainer.addEventListener('click', (e) => {
+    brandingContainer.addEventListener('click', (e) => {
       e.preventDefault();
 
       const input = document.createElement('input');
@@ -24,12 +24,12 @@
         return response.json();
       })
       .then((config) => {
-        const haibazoBrandingContainer = window.parent.document.getElementById('haibazo-branding');
+        const brandingContainer = window.parent.document.getElementById('haibazo-branding');
 
-        if (!haibazoBrandingContainer) return;
+        if (!brandingContainer) return;
 
-        const appNameContainer = haibazoBrandingContainer.querySelector('.app-name');
-        const appVersionContainer = haibazoBrandingContainer.querySelector('.app-version');
+        const appNameContainer = brandingContainer.querySelector('.app-name');
+        const appVersionContainer = brandingContainer.querySelector('.app-version');
 
         if (appNameContainer) {
           appNameContainer.innerHTML = config.name;

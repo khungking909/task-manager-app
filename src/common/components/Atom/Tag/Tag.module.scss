@@ -1,0 +1,99 @@
+@import '../../../../styles/mixins.scss';
+
+.tag {
+  padding: var(--spacing-12);
+  width: max-content;
+  min-width: 204px;
+
+  &.color {
+    &__dark {
+      background-color: var(--color-black-900);
+
+      --color-content-tag: var(--color-white);
+    }
+
+    &__light {
+      background-color: var(--color-white-900);
+
+      --color-content-tag: var(--color-black-900);
+    }
+
+    &__success {
+      background-color: #20c997;
+
+      --color-content-tag: var(--color-white);
+    }
+
+    &__warning {
+      background-color: #ffcb2f;
+
+      --color-content-tag: var(--color-black-900);
+    }
+
+    &__danger {
+      background-color: #dc3545;
+
+      --color-content-tag: var(--color-white);
+    }
+
+    &__info {
+      background-color: #0baaca;
+
+      --color-content-tag: var(--color-white);
+    }
+
+    &__gray {
+      background-color: var(--color-black-200);
+
+      --color-content-tag: var(--color-black-900);
+    }
+
+    &__gray-500 {
+      background-color: var(--color-black-500);
+
+      --color-content-tag: var(--color-white);
+    }
+  }
+
+  &.rounded {
+    border-radius: var(--spacing-6);
+  }
+
+  &.pill {
+    border-radius: var(--spacing-50);
+  }
+
+  .content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 500;
+    font-size: var(--spacing-20);
+    line-height: var(--spacing-28);
+    color: var(--color-content-tag);
+  }
+}
+
+@include xs {
+  .tag {
+    padding: var(--spacing-4);
+    min-width: 132px;
+
+    .content {
+      font-size: var(--spacing-16);
+      line-height: var(--spacing-30);
+    }
+  }
+}
+
+@include sm {
+  .tag {
+    padding: var(--spacing-4);
+    min-width: 158px;
+
+    .content {
+      font-size: var(--spacing-18);
+      line-height: var(--spacing-32);
+    }
+  }
+}

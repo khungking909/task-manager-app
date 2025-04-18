@@ -1,0 +1,9 @@
+.review {
+  & > div {
+    border: none !important;
+
+    & > div {
+      padding: 0;
+    }
+  }
+}

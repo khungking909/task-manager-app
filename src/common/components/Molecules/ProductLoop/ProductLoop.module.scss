@@ -1,0 +1,25 @@
+.swiper {
+  height: 100%;
+  width: 100%;
+}
+
+.swiper__left {
+  flex-shrink: 0;
+}
+
+.swiper__right {
+  flex-grow: 1;
+}
+
+.image {
+  border-radius: 20px;
+}
+
+.swiper__mini {
+  aspect-ratio: 160 / 175;
+
+  .active {
+    border: 1px solid #000000;
+    transition: border 0.2s ease-in-out;
+  }
+}

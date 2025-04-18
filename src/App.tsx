@@ -1,9 +1,23 @@
-import { memo } from 'react';
-
-import { HBZ0000 } from '@pages/HBZ0000';
+import { memo, useEffect } from 'react';
+import { useDispatch } from 'react-redux';
+import { RouterProvider } from 'react-router-dom';
+import { useGetUserFromTokenQuery } from 'src/app/apis/authApi';
+import router from 'src/app/routes/Router';
+import { setUser } from 'src/app/slices/authSlice/authSlice';
 
 const AppComponent = () => {
-  return <HBZ0000 />;
+  const dispatch = useDispatch();
+  const { data, isSuccess } = useGetUserFromTokenQuery();
+
+  useEffect(() => {
+    if (isSuccess && data.user) {
+      dispatch(setUser(data.user));
+    }
+  }, [isSuccess, dispatch, data]);
+
+  return <RouterProvider router={router} />;
 };
 
-export const App = memo(AppComponent);
+const App = memo(AppComponent);
+
+export default App;

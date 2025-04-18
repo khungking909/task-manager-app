@@ -14,7 +14,7 @@ if (!componentTypes.includes(componentType)) {
   process.exit(1);
 }
 
-const componentDir = path.resolve(`src/components/${componentType}`, componentName);
+const componentDir = path.resolve(`src/common/components/${componentType}`, componentName);
 
 // Tạo thư mục component
 fs.mkdirSync(componentDir, { recursive: true });
@@ -35,8 +35,7 @@ const files = [
   },
   {
     name: `${componentName}.stories.tsx`,
-    content: `
-import { ${componentName} } from '@components/${componentType}/${componentName}/${componentName}';
+    content: `import { ${componentName} } from '@components/${componentType}/${componentName}/${componentName}';
 import type { Meta, StoryObj } from '@storybook/react';
 // More on how to set up stories at: https://storybook.js.org/docs/writing-stories#default-export
 const meta: Meta<typeof ${componentName}> = {
