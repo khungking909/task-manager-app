@@ -1,6 +1,5 @@
 import { defineConfig } from 'vitest/config';
 import react from '@vitejs/plugin-react';
-import path from 'path';
 import checker from 'vite-plugin-checker';
 import dts from 'vite-plugin-dts';
 import tsconfigPaths from 'vite-tsconfig-paths';
@@ -26,7 +25,7 @@ export default defineConfig({
     assetsDir: './src/assets',
     rollupOptions: {
       external: ['react', 'react-dom'],
-      input: path.resolve(__dirname, 'src/main.tsx'), // Dùng entry point là main.tsx
+      input: 'public/index.html',
       output: {
         globals: {
           react: 'React',
