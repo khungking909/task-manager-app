@@ -87,7 +87,7 @@
   ],
   "main": "./dist/index.cjs",
   "module": "./dist/index.js",
-  "name": "yen_project",
+  "name": "task-manager-app",
   "packageManager": "yarn@4.5.0",
   "scripts": {
     "build": "yarn run build:package",
