@@ -1,55 +1,61 @@
-import image from '@assets/yen.jpg';
-import image2 from '@assets/yen2.jpg';
-import image4 from '@assets/yen4.jpg';
-import { Box } from '@components/Atom/Box';
-import { Typography } from '@components/Atom/Typography';
-import { CategoryCarousel } from '@components/Molecules/CategoryCarousel';
-import { FeatureSection } from '@components/Organism/FeatureSection';
-import { Loading } from '@components/Organism/Loading';
-import { Slider } from '@components/Organism/Slider';
-import { useMemo } from 'react';
-import { useTranslation } from 'react-i18next';
-import { useGetProductsQuery } from 'src/app/apis/productApi';
+import { Box, Button, Image, Typography } from '@components/Atom';
+import { ArrowRight } from '@components/Atom/Icon/icons/ArrowRight';
+import useScreenSize from '@hooks/useScreenSize';
+import { Link } from 'react-router-dom';
+import { getIsMobile } from 'src/common/untils/isMobile';
+import { ScreenPath } from 'src/constants/screen';
+import { Setting } from 'src/constants/setting';
 
 export default function Home() {
-  const { t } = useTranslation();
-  const { data = [], isLoading, isFetching } = useGetProductsQuery();
-
-  const productOutstanding = useMemo(() => {
-    return data
-      .map((item) => {
-        return {
-          name: item.name,
-          image: item.images[0],
-          slug: item.slug,
-        };
-      })
-      .sort(() => Math.random() - 0.5);
-  }, [data]);
+  const responsive = useScreenSize();
+  const isMobile = getIsMobile(responsive);
 
   return (
-    <>
-      <Box
-        height={{
-          xs: 400,
-          sm: 500,
-        }}
-      >
-        <Slider imageList={[image, image2, image4]} autoPlay autoPlaySpeed={5000} />
+    <Box
+      position={'relative'}
+      height={'100vh'}
+      width={'100vw'}
+      overflow={'hidden'}
+      display="flex"
+      justifyContent="center"
+      minWidth={Setting.MIN_WIDTH}
+      maxWidth={Setting.MAX_WIDTH}
+      m={'0 auto'}
+    >
+      <Box position={'absolute'} top={0} left={0} right={0} bottom={0} zIndex={-1}>
+        <Image
+          src={'https://www.figma.com/community/resource/24577293-73e5-4a35-940e-a9ce55ff8863/thumbnail'}
+        />
       </Box>
-      {isLoading || isFetching ? (
-        <Loading loadingType="dots" />
-      ) : (
-        <CategoryCarousel outstandingList={productOutstanding} title={t('outstanding')} />
-      )}
-      <FeatureSection>
-        <Box display="flex" flexDirection="column" gap={4} width="100%" overflow="hidden">
-          <Typography fontSize="3xl" variant="h3">
-            {t('feature_products.about')}
-          </Typography>
-          <Typography fontSize="lg">{t('feature_products.description')}</Typography>
-        </Box>
-      </FeatureSection>
-    </>
+      <Box
+        position={'absolute'}
+        width={'100%'}
+        bottom={0}
+        display="flex"
+        flexDirection="column"
+        alignItems="center"
+        gap={isMobile ? Setting.DIGIT_16 : Setting.DIGIT_24}
+        pb={isMobile ? Setting.DIGIT_52 : Setting.DIGIT_72}
+        maxWidth={isMobile ? Setting.WIDTH_SP : Setting.WIDTH_PC}
+        justifyContent="center"
+      >
+        <Typography variant={isMobile ? 'h5' : 'h4'} textAlign="center">
+          Task Manager & To-Do List
+        </Typography>
+        <Typography variant="text" color="gray" textAlign="center">
+          Organize your tasks and projects
+        </Typography>
+        <Link to={ScreenPath.DASHBOARD}>
+          <Button
+            color="success"
+            roundness={isMobile ? 'pill' : 'rounded'}
+            IconRight={<ArrowRight />}
+            fullWidth={isMobile}
+          >
+            Let&lsquo;s started
+          </Button>
+        </Link>
+      </Box>
+    </Box>
   );
 }

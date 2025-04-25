@@ -9,4 +9,5 @@ export interface CarouselProps extends React.HTMLAttributes<HTMLDivElement> {
   readonly keyboard?: boolean;
   readonly navigation?: boolean;
   readonly navigationColor?: 'dark' | 'light' | 'danger' | 'warning' | 'success' | 'info';
+  readonly elementCenter?: boolean;
 }

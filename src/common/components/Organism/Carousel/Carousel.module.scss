@@ -5,6 +5,17 @@
   height: 100%;
   position: relative;
 
+  &.carousel__container_desktop {
+    & > div {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      width: 100%;
+      height: 100%;
+    }
+  }
+
   .slide {
     width: max-content;
     height: max-content;

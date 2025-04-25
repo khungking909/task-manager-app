@@ -1,51 +1,27 @@
+import { Dashboard } from '@pages/Dashboard';
 import { Home } from '@pages/Home';
-import Product from '@pages/Product/Product';
-import { ProductDetail } from '@pages/ProductDetail';
-import SignIn from '@pages/SignIn/SignIn';
-import SignUp from '@pages/SignUp/SignUp';
-import { lazy } from 'react';
+import Task from '@pages/Task/Task';
 import { createBrowserRouter } from 'react-router-dom';
-import { Layout } from 'src/common/layouts';
-import ProtectedRoute from 'src/common/layouts/Layout/ProtectedRoute';
+import Layout from 'src/common/Layout';
 import { ScreenPath } from 'src/constants/screen';
-
-const CartPage = lazy(() => import('@pages/Cart/Cart'));
 
 const router = createBrowserRouter(
   [
     {
       path: ScreenPath.HOME,
-      element: <Layout></Layout>,
+      element: <Layout />,
       children: [
         {
           index: true,
           element: <Home />,
         },
         {
-          element: <Product />,
-          path: ScreenPath.PRODUCT,
+          path: ScreenPath.DASHBOARD,
+          element: <Dashboard />,
         },
         {
-          element: <ProductDetail />,
-          path: ScreenPath.PRODUCT_DETAIL,
-        },
-        {
-          element: <ProtectedRoute />,
-          children: [
-            {
-              path: '',
-              element: <CartPage />,
-            },
-          ],
-          path: ScreenPath.CART,
-        },
-        {
-          element: <SignIn />,
-          path: ScreenPath.SIGN_IN,
-        },
-        {
-          element: <SignUp />,
-          path: ScreenPath.SIGN_UP,
+          path: ScreenPath.TASK,
+          element: <Task />,
         },
       ],
     },

@@ -23,5 +23,7 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {
-  args: {},
+  args: {
+    image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQU_vfk9BGo057RJEXWkvtcTP03HBfMLiQbUA&s',
+  },
 };

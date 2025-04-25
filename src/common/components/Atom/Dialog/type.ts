@@ -4,4 +4,5 @@ export interface DialogProps {
   readonly onCloseDialog?: (value: boolean) => void;
   readonly type?: 'left' | 'right' | 'top' | 'bottom' | 'center';
   readonly delay?: number;
+  readonly fullScreen?: boolean;
 }

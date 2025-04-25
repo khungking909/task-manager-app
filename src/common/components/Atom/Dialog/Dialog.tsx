@@ -3,17 +3,13 @@ import { arrayToString } from 'src/common/untils/arrayToString';
 import dialogModuleClass from './Dialog.module.scss';
 import { DialogProps } from './type';
 
-const Dialog = ({ children, open, onCloseDialog, type = 'left' }: DialogProps) => {
+const Dialog = ({ children, open, onCloseDialog, type = 'left', fullScreen = true }: DialogProps) => {
   const [visible, setVisible] = useState(open);
 
   useEffect(() => {
     if (open) {
-      document.body.style.overflow = 'hidden';
-      document.body.style.paddingRight = '4px';
       setVisible(true);
     } else {
-      document.body.style.overflow = '';
-      document.body.style.paddingRight = '';
       setTimeout(() => setVisible(false), 300);
     }
 
@@ -25,7 +21,12 @@ const Dialog = ({ children, open, onCloseDialog, type = 'left' }: DialogProps) =
   return (
     visible && (
       <div
-        className={arrayToString([dialogModuleClass.root, !open ? dialogModuleClass.closing : ''])}
+        className={arrayToString([
+          dialogModuleClass.root,
+          !open ? dialogModuleClass.closing : '',
+          fullScreen ? dialogModuleClass.full__Screen : '',
+          dialogModuleClass[type],
+        ])}
         onClick={onCloseDialog ? () => onCloseDialog(false) : undefined}
         aria-hidden="true"
       >

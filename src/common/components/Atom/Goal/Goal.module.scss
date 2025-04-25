@@ -1,0 +1,17 @@
+.goal {
+  position: relative;
+  background-color: white;
+  border-radius: 20px;
+  width: 100%;
+  height: 10px;
+
+  &__progress {
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    position: absolute;
+    top: 0;
+    height: 100%;
+    border-radius: 20px;
+    transition: width 0.5s ease-in-out;
+    width: 0;
+  }
+}

@@ -110,6 +110,8 @@ export const Setting = {
   Zalo: 'Zalo',
   WIDTH_SP: 'calc(100% - 32px)',
   WIDTH_PC: 'calc(100% - 104px)',
+  MIN_WIDTH: '320px',
+  MAX_WIDTH: '1440px',
   PERCENTAGE_SYMBOL: '%',
   TOKEN: 'token',
   LIMIT_PRODUCT: 12,

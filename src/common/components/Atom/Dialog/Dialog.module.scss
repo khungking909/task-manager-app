@@ -1,8 +1,6 @@
 @import '../../../../styles/mixins.scss';
 
 .root {
-  width: 100vw;
-  height: 100vh;
   background-color: rgba(0, 0, 0, 0.5);
   position: fixed;
   inset: 0;
@@ -10,6 +8,11 @@
   overflow: auto;
   opacity: 1;
   transition: opacity 0.3s ease;
+
+  &.full__Screen {
+    width: 100vw;
+    height: 100vh;
+  }
 
   &.closing {
     opacity: 0;

@@ -17,6 +17,9 @@ const meta: Meta<typeof Button> = {
   },
   tags: ['autodocs'],
   argTypes: {},
+  args: {
+    children: 'Button',
+  },
 };
 
 export default meta;

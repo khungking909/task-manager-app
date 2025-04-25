@@ -16,12 +16,23 @@ const meta: Meta<typeof Typography> = {
     },
   },
   tags: ['autodocs'],
-  argTypes: {},
+  argTypes: {
+    variant: {
+      options: ['h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'h7', 'text'],
+      control: { type: 'select' },
+    },
+    color: {
+      options: ['#eccc68', '#ff4757', '#2f3542', '#1e90ff', '#2ed573', '#ced6e0'],
+      control: { type: 'select' },
+    },
+  },
 };
 
 export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {
-  args: {},
+  args: {
+    children: 'Typography',
+  },
 };

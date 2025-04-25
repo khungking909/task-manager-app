@@ -38,8 +38,5 @@ export const Default: Story = {
   args: {
     prefix: <Add size="xLarge" />,
     suffix: <ArrowRight size="xLarge" />,
-    variant: 'rounded',
-    dropdown: <ArrowRight size="xLarge" />,
-    errorMessage: 'Error message',
   },
 };

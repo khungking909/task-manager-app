@@ -1,7 +1,7 @@
 export interface BaseDataTimestamp {
   createdAt: string;
   updatedAt: string;
-  deletedAt: string | null;
+  deletedAt?: string | null;
 }
 
 export interface ToastType {

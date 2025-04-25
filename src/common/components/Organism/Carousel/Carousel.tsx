@@ -8,6 +8,10 @@ import { Autoplay, Keyboard, Mousewheel } from 'swiper/modules';
 import { Swiper, SwiperClass, SwiperSlide } from 'swiper/react';
 import carouselModuleClass from './Carousel.module.scss';
 import { CarouselProps } from './type';
+import 'swiper/css';
+import 'swiper/css/free-mode';
+import 'swiper/css/navigation';
+import 'swiper/css/thumbs';
 
 const Carousel = ({
   children,
@@ -21,6 +25,7 @@ const Carousel = ({
   keyboard,
   navigationColor = 'dark',
   navigation,
+  elementCenter,
   className = '',
 }: CarouselProps) => {
   const childrenArray = React.Children.toArray(children);
@@ -33,7 +38,11 @@ const Carousel = ({
       slidesPerView={slidesPerView}
       spaceBetween={spaceBetween}
       direction={direction}
-      className={arrayToString([carouselModuleClass.carousel, className])}
+      className={arrayToString([
+        carouselModuleClass.carousel,
+        elementCenter ? carouselModuleClass['carousel__container_desktop'] : '',
+        className,
+      ])}
       modules={[Autoplay, Keyboard, Mousewheel]}
       autoplay={autoPlay ? { delay: autoPlayInterval, disableOnInteraction: false } : false}
       loop={loop}

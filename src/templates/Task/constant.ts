@@ -1,0 +1,15 @@
+export const taskTemplateConstant = {
+  addTaskTitle: 'Add task',
+  addTaskDescription: 'Add a task into project',
+  taskName: 'Task name *',
+  taskDescription: 'Task description *',
+  addTaskButton: 'Add task',
+  editTaskTitle: 'Edit task',
+  editTaskDescription: 'Edit a task into project',
+  editTaskButton: 'Edit task',
+  todo: 'Todo',
+  inProgress: 'In Progress',
+  done: 'Done',
+  all: 'All',
+  status: 'Status :',
+};
