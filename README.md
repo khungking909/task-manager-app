@@ -11,6 +11,7 @@
 - 🧠 TypeScript
 - 🧪 Vitest + Testing Library (unit test)
 - 📚 Storybook – phát triển UI độc lập
+- 🎨 SCSS – viết style tùy chỉnh với biến, mixin, nesting
 ---
 
 ## ⚙️ Cài đặt & Chạy dự án
